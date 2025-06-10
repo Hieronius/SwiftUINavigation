@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		DDA935B12DF7ED4C001AF089 /* SwiftUINavigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA935B02DF7ED4C001AF089 /* SwiftUINavigationApp.swift */; };
-		DDA935B32DF7ED4C001AF089 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA935B22DF7ED4C001AF089 /* ContentView.swift */; };
+		DDA935B32DF7ED4C001AF089 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA935B22DF7ED4C001AF089 /* MenuView.swift */; };
 		DDA935B52DF7ED51001AF089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA935B42DF7ED51001AF089 /* Assets.xcassets */; };
 		DDA935B82DF7ED51001AF089 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA935B72DF7ED51001AF089 /* Preview Assets.xcassets */; };
+		DDA935BF2DF7EE14001AF089 /* Plan in Resources */ = {isa = PBXBuildFile; fileRef = DDA935BE2DF7EE14001AF089 /* Plan */; };
+		DDA935CF2DF7F005001AF089 /* CompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA935CE2DF7F005001AF089 /* CompositionRoot.swift */; };
+		DDA935D12DF7F068001AF089 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA935D02DF7F068001AF089 /* NavigationManager.swift */; };
+		DDA935D32DF7F15D001AF089 /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA935D22DF7F15D001AF089 /* AppScreen.swift */; };
+		DDA935D52DF7F289001AF089 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA935D42DF7F289001AF089 /* MenuViewModel.swift */; };
+		DDA935D72DF7F689001AF089 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA935D62DF7F689001AF089 /* Screen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DDA935AD2DF7ED4C001AF089 /* SwiftUINavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUINavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA935B02DF7ED4C001AF089 /* SwiftUINavigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUINavigationApp.swift; sourceTree = "<group>"; };
-		DDA935B22DF7ED4C001AF089 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DDA935B22DF7ED4C001AF089 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		DDA935B42DF7ED51001AF089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDA935B72DF7ED51001AF089 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DDA935BE2DF7EE14001AF089 /* Plan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Plan; sourceTree = "<group>"; };
+		DDA935CE2DF7F005001AF089 /* CompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionRoot.swift; sourceTree = "<group>"; };
+		DDA935D02DF7F068001AF089 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		DDA935D22DF7F15D001AF089 /* AppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreen.swift; sourceTree = "<group>"; };
+		DDA935D42DF7F289001AF089 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		DDA935D62DF7F689001AF089 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +63,16 @@
 		DDA935AF2DF7ED4C001AF089 /* SwiftUINavigation */ = {
 			isa = PBXGroup;
 			children = (
+				DDA935BE2DF7EE14001AF089 /* Plan */,
 				DDA935B02DF7ED4C001AF089 /* SwiftUINavigationApp.swift */,
-				DDA935B22DF7ED4C001AF089 /* ContentView.swift */,
-				DDA935B42DF7ED51001AF089 /* Assets.xcassets */,
+				DDA935CE2DF7F005001AF089 /* CompositionRoot.swift */,
+				DDA935D02DF7F068001AF089 /* NavigationManager.swift */,
+				DDA935D62DF7F689001AF089 /* Screen.swift */,
+				DDA935D22DF7F15D001AF089 /* AppScreen.swift */,
+				DDA935C02DF7EF07001AF089 /* Menu */,
+				DDA935C22DF7EF16001AF089 /* Room */,
+				DDA935C12DF7EF10001AF089 /* Dungeon */,
+				DDA935CC2DF7EF82001AF089 /* Resources */,
 				DDA935B62DF7ED51001AF089 /* Preview Content */,
 			);
 			path = SwiftUINavigation;
@@ -65,6 +84,109 @@
 				DDA935B72DF7ED51001AF089 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DDA935C02DF7EF07001AF089 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				DDA935CB2DF7EF59001AF089 /* Model */,
+				DDA935CA2DF7EF56001AF089 /* ViewModel */,
+				DDA935C92DF7EF51001AF089 /* View */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		DDA935C12DF7EF10001AF089 /* Dungeon */ = {
+			isa = PBXGroup;
+			children = (
+				DDA935C82DF7EF4E001AF089 /* Model */,
+				DDA935C72DF7EF4A001AF089 /* ViewModel */,
+				DDA935C62DF7EF46001AF089 /* View */,
+			);
+			path = Dungeon;
+			sourceTree = "<group>";
+		};
+		DDA935C22DF7EF16001AF089 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				DDA935C52DF7EF2F001AF089 /* Model */,
+				DDA935C42DF7EF28001AF089 /* VIewModel */,
+				DDA935C32DF7EF1F001AF089 /* View */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		DDA935C32DF7EF1F001AF089 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDA935C42DF7EF28001AF089 /* VIewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIewModel;
+			sourceTree = "<group>";
+		};
+		DDA935C52DF7EF2F001AF089 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DDA935C62DF7EF46001AF089 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDA935C72DF7EF4A001AF089 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DDA935C82DF7EF4E001AF089 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DDA935C92DF7EF51001AF089 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDA935B22DF7ED4C001AF089 /* MenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDA935CA2DF7EF56001AF089 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DDA935D42DF7F289001AF089 /* MenuViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DDA935CB2DF7EF59001AF089 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DDA935CC2DF7EF82001AF089 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DDA935B42DF7ED51001AF089 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +249,7 @@
 			files = (
 				DDA935B82DF7ED51001AF089 /* Preview Assets.xcassets in Resources */,
 				DDA935B52DF7ED51001AF089 /* Assets.xcassets in Resources */,
+				DDA935BF2DF7EE14001AF089 /* Plan in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +260,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDA935B32DF7ED4C001AF089 /* ContentView.swift in Sources */,
+				DDA935D72DF7F689001AF089 /* Screen.swift in Sources */,
+				DDA935CF2DF7F005001AF089 /* CompositionRoot.swift in Sources */,
+				DDA935D12DF7F068001AF089 /* NavigationManager.swift in Sources */,
+				DDA935B32DF7ED4C001AF089 /* MenuView.swift in Sources */,
+				DDA935D52DF7F289001AF089 /* MenuViewModel.swift in Sources */,
 				DDA935B12DF7ED4C001AF089 /* SwiftUINavigationApp.swift in Sources */,
+				DDA935D32DF7F15D001AF089 /* AppScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
