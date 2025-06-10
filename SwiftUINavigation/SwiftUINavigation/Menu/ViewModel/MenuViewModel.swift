@@ -2,6 +2,7 @@ import SwiftUI
 
 class MenuViewModel: ObservableObject {
 
+	let compositionRoot: CompositionRoot
 	let navigationManager: NavigationManager
 
 	@Published var items = [
@@ -12,9 +13,20 @@ class MenuViewModel: ObservableObject {
 
 	@Published var path: NavigationPath
 
-	init(navigationManager: NavigationManager) {
+	init(compositionRoot: CompositionRoot,
+		navigationManager: NavigationManager) {
+
+		self.compositionRoot = compositionRoot
 		self.navigationManager = navigationManager
 
-		self.path = navigationManager.getPath()
+		self.path = self.navigationManager.getPath()
+	}
+}
+
+extension MenuViewModel {
+
+	func buildRoom() -> some View {
+
+		self.compositionRoot.buildRoom()
 	}
 }

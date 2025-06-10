@@ -10,10 +10,24 @@ class CompositionRoot {
 
 	func buildMenu() -> MenuView {
 
+		let compositionRoot = self
+
 		let navigationManager = getNavigationManager()
 
-		let viewModel = MenuViewModel(navigationManager: navigationManager)
+		let viewModel = MenuViewModel(
+			compositionRoot: compositionRoot,
+			navigationManager: navigationManager
+		)
 
 		return MenuView(viewModel: viewModel)
+	}
+
+	func buildRoom() -> RoomView {
+
+		let navigationManager = getNavigationManager()
+
+		let viewModel = RoomViewModel(navigationManager: navigationManager)
+
+		return RoomView(viewModel: viewModel)
 	}
 }

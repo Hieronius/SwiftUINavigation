@@ -33,16 +33,14 @@ struct MenuView: View {
 
 				switch screen.type {
 
-				case .room:
-
-					EmptyView()
+				case .room: viewModel.buildRoom()
 
 				case .dungeon:
 
 					EmptyView()
 
 				default:
-					
+
 					EmptyView()
 				}
 			}
