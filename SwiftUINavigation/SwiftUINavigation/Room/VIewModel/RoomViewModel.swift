@@ -4,16 +4,9 @@ class RoomViewModel: ObservableObject {
 
 	private let navigationManager: NavigationManager
 
-	@Published private var path: NavigationPath
-
 	init(navigationManager: NavigationManager) {
 		self.navigationManager = navigationManager
-
-		self.path = navigationManager.getPath()
-	}
-
-	func syncPath() {
-		path = navigationManager.getPath()
+		print("🔍 Path now has \(navigationManager.path.count) entries: \(navigationManager.path)")
 	}
 
 	func pop() {
@@ -21,6 +14,7 @@ class RoomViewModel: ObservableObject {
 	}
 
 	func pushDungeon() {
-//		navigationManager.
+		pop()
+		navigationManager.push(.dungeon)
 	}
 }

@@ -1,2 +1,6 @@
 
 6. Connect Menu with module 1 and 2 with navigation
+
+The way i did connect two screens with each other by pop() -> push() is working. Try to expand it
+
+Analyse it tomorrow and read the book about COmbine

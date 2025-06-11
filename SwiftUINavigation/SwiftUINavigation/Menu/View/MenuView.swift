@@ -22,16 +22,20 @@ struct MenuView: View {
 
 			// 3. Create the list or table of items to display
 
-			List(viewModel.items) { item in
+			List {
 
-				// 4. Each option it's a Navigation Link
+				Button("Push to Room") {
+					viewModel.pushRoom()
+				}
 
-				NavigationLink(item.label, value: item)
+				Button("Push to Dungeon") {
+					viewModel.pushDungeon()
+				}
 			}
 
-			.navigationDestination(for: Screen.self) { screen in
+			.navigationDestination(for: AppScreen.self) { screen in
 
-				switch screen.type {
+				switch screen {
 
 				case .room: viewModel.buildRoom()
 

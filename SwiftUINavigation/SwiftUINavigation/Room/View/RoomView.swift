@@ -11,9 +11,11 @@ struct RoomView: View {
 	var body: some View {
 
 		Spacer()
+		Text("Room")
+		Spacer()
 
 		Button("Go back to Menu") {
-			viewModel.pop()
+			withAnimation { viewModel.pop() }
 		}
 
 		Spacer()

@@ -11,9 +11,12 @@ struct DungeonView: View {
 	var body: some View {
 
 		Spacer()
+		Text("Dungeon")
+
+		Spacer()
 
 		Button("Go back to Menu") {
-			viewModel.pop()
+			withAnimation { viewModel.pop() }
 		}
 
 		Spacer()

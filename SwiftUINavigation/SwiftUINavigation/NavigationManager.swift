@@ -1,8 +1,8 @@
 import SwiftUI
 
-class NavigationManager {
+class NavigationManager: ObservableObject {
 
-	private var path = NavigationPath()
+	@Published var path = NavigationPath()
 
 	var isEmpty: Bool {
 		return path.isEmpty
@@ -18,10 +18,15 @@ class NavigationManager {
 
 	func push(_ screen: AppScreen) {
 		path.append(screen)
+		print("🔍 Path now has \(path.count) entries: \(path)")
+
 	}
 
 	func pop() {
 		guard !path.isEmpty else { return }
 		path.removeLast()
+		print("🔍 Path now has \(path.count) entries: \(path)")
+
 	}
+
 }
