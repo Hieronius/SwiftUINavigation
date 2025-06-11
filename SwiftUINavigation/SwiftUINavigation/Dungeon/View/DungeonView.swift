@@ -1,10 +1,10 @@
-import SwiftUI 
+import SwiftUI
 
-struct RoomView: View {
+struct DungeonView: View {
 
-	@StateObject private var viewModel: RoomViewModel
+	@StateObject private var viewModel: DungeonViewModel
 
-	init(viewModel: RoomViewModel) {
+	init(viewModel: DungeonViewModel) {
 		_viewModel = StateObject(wrappedValue: viewModel)
 	}
 
@@ -18,8 +18,8 @@ struct RoomView: View {
 
 		Spacer()
 
-		Button("Go to Dungeon") {
-			viewModel.pushDungeon()
+		Button("Go to Room") {
+			viewModel.pushRoom()
 		}
 
 		Spacer()

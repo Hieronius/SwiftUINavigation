@@ -30,4 +30,13 @@ class CompositionRoot {
 
 		return RoomView(viewModel: viewModel)
 	}
+
+	func buildDungeon() -> DungeonView {
+
+		let navigationManager = getNavigationManager()
+
+		let viewModel = DungeonViewModel(navigationManager: navigationManager)
+
+		return DungeonView(viewModel: viewModel)
+	}
 }

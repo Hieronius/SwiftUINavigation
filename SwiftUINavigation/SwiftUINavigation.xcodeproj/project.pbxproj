@@ -19,6 +19,8 @@
 		DDA935D72DF7F689001AF089 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA935D62DF7F689001AF089 /* Screen.swift */; };
 		DDA935D92DF7F9B0001AF089 /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA935D82DF7F9B0001AF089 /* RoomViewModel.swift */; };
 		DDA935DB2DF7FA5D001AF089 /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA935DA2DF7FA5D001AF089 /* RoomView.swift */; };
+		DDAB28372DF9482200F850BB /* DungeonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB28362DF9482200F850BB /* DungeonViewModel.swift */; };
+		DDAB28392DF9482D00F850BB /* DungeonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB28382DF9482D00F850BB /* DungeonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		DDA935D62DF7F689001AF089 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		DDA935D82DF7F9B0001AF089 /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
 		DDA935DA2DF7FA5D001AF089 /* RoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
+		DDAB28362DF9482200F850BB /* DungeonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonViewModel.swift; sourceTree = "<group>"; };
+		DDAB28382DF9482D00F850BB /* DungeonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,7 @@
 		DDA935C62DF7EF46001AF089 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DDAB28382DF9482D00F850BB /* DungeonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 		DDA935C72DF7EF4A001AF089 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DDAB28362DF9482200F850BB /* DungeonViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -267,12 +273,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDA935DB2DF7FA5D001AF089 /* RoomView.swift in Sources */,
+				DDAB28392DF9482D00F850BB /* DungeonView.swift in Sources */,
 				DDA935D72DF7F689001AF089 /* Screen.swift in Sources */,
 				DDA935CF2DF7F005001AF089 /* CompositionRoot.swift in Sources */,
 				DDA935D12DF7F068001AF089 /* NavigationManager.swift in Sources */,
 				DDA935B32DF7ED4C001AF089 /* MenuView.swift in Sources */,
 				DDA935D52DF7F289001AF089 /* MenuViewModel.swift in Sources */,
 				DDA935B12DF7ED4C001AF089 /* SwiftUINavigationApp.swift in Sources */,
+				DDAB28372DF9482200F850BB /* DungeonViewModel.swift in Sources */,
 				DDA935D32DF7F15D001AF089 /* AppScreen.swift in Sources */,
 				DDA935D92DF7F9B0001AF089 /* RoomViewModel.swift in Sources */,
 			);

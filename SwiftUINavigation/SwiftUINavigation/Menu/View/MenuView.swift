@@ -35,9 +35,7 @@ struct MenuView: View {
 
 				case .room: viewModel.buildRoom()
 
-				case .dungeon:
-
-					EmptyView()
+				case .dungeon: viewModel.buildDungeon()
 
 				default:
 

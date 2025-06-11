@@ -1,6 +1,6 @@
 import SwiftUI
 
-class RoomViewModel: ObservableObject {
+class DungeonViewModel: ObservableObject {
 
 	private let navigationManager: NavigationManager
 
@@ -20,7 +20,9 @@ class RoomViewModel: ObservableObject {
 		navigationManager.pop()
 	}
 
-	func pushDungeon() {
-//		navigationManager.
+	func pushRoom() {
+		// push room
 	}
+
+
 }

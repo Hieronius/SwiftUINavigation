@@ -29,4 +29,9 @@ extension MenuViewModel {
 
 		self.compositionRoot.buildRoom()
 	}
+
+	func buildDungeon() -> some View {
+
+		compositionRoot.buildDungeon()
+	}
 }
