@@ -10,21 +10,33 @@ struct DungeonView: View {
 
 	var body: some View {
 
-		Spacer()
-		Text("Dungeon")
+		VStack {
 
-		Spacer()
+			Spacer()
+			Text("Dungeon")
 
-		Button("Go back to Menu") {
-			withAnimation { viewModel.pop() }
+			Spacer()
+
+			Button("Go back to Menu") {
+				withAnimation { viewModel.pop() }
+			}
+
+			Spacer()
+
+			Button("Go to Room") {
+				viewModel.pushRoom()
+			}
+
+			Spacer()
+
+			Button("Go to World") {
+				viewModel.pushWorld()
+			}
+
+			Button("Go to Town") {
+				viewModel.pushTown()
+			}
 		}
-
-		Spacer()
-
-		Button("Go to Room") {
-			viewModel.pushRoom()
-		}
-
-		Spacer()
+		.navigationBarBackButtonHidden(true)
 	}
 }

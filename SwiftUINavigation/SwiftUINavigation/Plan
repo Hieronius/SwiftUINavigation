@@ -3,4 +3,4 @@
 
 The way i did connect two screens with each other by pop() -> push() is working. Try to expand it
 
-Analyse it tomorrow and read the book about COmbine
+if i do transition from Room to Dungeon it mean we should save current room state before transition. So i will create two methods like "save state" and "transition to dungeon". Should i combine one in another and call it "saveAndTransition" or just "goToDungeon" will be enough?

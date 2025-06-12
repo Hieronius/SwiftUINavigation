@@ -31,6 +31,15 @@ struct MenuView: View {
 				Button("Push to Dungeon") {
 					viewModel.pushDungeon()
 				}
+
+				Button("Push to World") {
+					viewModel.pushWorld()
+				}
+
+				Button("Push to Town") {
+					viewModel.pushTown()
+				}
+
 			}
 
 			.navigationDestination(for: AppScreen.self) { screen in
@@ -40,6 +49,10 @@ struct MenuView: View {
 				case .room: viewModel.buildRoom()
 
 				case .dungeon: viewModel.buildDungeon()
+
+				case .world: viewModel.buildWorld()
+
+				case .town: viewModel.buildTown()
 
 				default:
 

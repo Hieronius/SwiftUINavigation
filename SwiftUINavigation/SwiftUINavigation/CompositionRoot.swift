@@ -2,6 +2,8 @@ import Foundation
 
 class CompositionRoot {
 
+	// MARK: For each NavigationFlow create it's own NavigationManager here and inject while building a specific screen
+
 	let navigationManager = NavigationManager()
 
 	func getNavigationManager() -> NavigationManager {
@@ -26,7 +28,9 @@ class CompositionRoot {
 
 		let navigationManager = getNavigationManager()
 
-		let viewModel = RoomViewModel(navigationManager: navigationManager)
+		let viewModel = RoomViewModel(
+			navigationManager: navigationManager
+		)
 
 		return RoomView(viewModel: viewModel)
 	}
@@ -35,8 +39,32 @@ class CompositionRoot {
 
 		let navigationManager = getNavigationManager()
 
-		let viewModel = DungeonViewModel(navigationManager: navigationManager)
+		let viewModel = DungeonViewModel(
+			navigationManager: navigationManager
+		)
 
 		return DungeonView(viewModel: viewModel)
+	}
+
+	func buildWorld() -> WorldView {
+
+		let navigationManager = getNavigationManager()
+
+		let viewModel = WorldViewModel(
+			navigationManager: navigationManager
+		)
+
+		return WorldView(viewModel: viewModel)
+	}
+
+	func buildTown() -> TownView {
+
+		let navigationManager = getNavigationManager()
+
+		let viewModel = TownViewModel(
+			navigationManager: navigationManager
+		)
+
+		return TownView(viewModel: viewModel)
 	}
 }

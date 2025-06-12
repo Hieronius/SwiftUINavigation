@@ -10,20 +10,32 @@ struct RoomView: View {
 
 	var body: some View {
 
-		Spacer()
-		Text("Room")
-		Spacer()
+		VStack {
+			Spacer()
+			Text("Room")
+			Spacer()
 
-		Button("Go back to Menu") {
-			withAnimation { viewModel.pop() }
+			Button("Go back to Menu") {
+				viewModel.backToMenu()
+			}
+
+			Spacer()
+
+			Button("Go to Dungeon") {
+				viewModel.pushDungeon()
+			}
+
+			Button("Go to World") {
+				viewModel.pushWorld()
+			}
+
+			Button("Go to Town") {
+				viewModel.pushTown()
+			}
+
+			Spacer()
+
 		}
-
-		Spacer()
-
-		Button("Go to Dungeon") {
-			viewModel.pushDungeon()
-		}
-
-		Spacer()
+		.navigationBarBackButtonHidden(true)
 	}
 }

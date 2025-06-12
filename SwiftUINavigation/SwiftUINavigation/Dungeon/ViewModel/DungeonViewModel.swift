@@ -19,5 +19,13 @@ class DungeonViewModel: ObservableObject {
 		navigationManager.push(.room)
 	}
 
+	func pushWorld() {
+		pop()
+		navigationManager.push(.world)
+	}
 
+	func pushTown() {
+		pop()
+		navigationManager.push(.town)
+	}
 }

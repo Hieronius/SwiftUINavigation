@@ -9,12 +9,22 @@ class RoomViewModel: ObservableObject {
 		print("🔍 Path now has \(navigationManager.path.count) entries: \(navigationManager.path)")
 	}
 
-	func pop() {
+	func backToMenu() {
 		navigationManager.pop()
 	}
 
 	func pushDungeon() {
-		pop()
+		backToMenu()
 		navigationManager.push(.dungeon)
+	}
+
+	func pushWorld() {
+		backToMenu()
+		navigationManager.push(.world)
+	}
+
+	func pushTown() {
+		backToMenu()
+		navigationManager.push(.town)
 	}
 }

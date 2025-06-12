@@ -2,16 +2,10 @@ import SwiftUI
 
 class MenuViewModel: ObservableObject {
 
-	let compositionRoot: CompositionRoot
-	var navigationManager: NavigationManager
+	private let compositionRoot: CompositionRoot
+	private let navigationManager: NavigationManager
 
-	@Published var path: NavigationPath = NavigationPath()
-
-	@Published var items = [
-
-		Screen(type: .dungeon),
-		Screen(type: .room)
-	]
+	@Published var path: NavigationPath
 
 	init(compositionRoot: CompositionRoot,
 		navigationManager: NavigationManager) {
@@ -20,11 +14,13 @@ class MenuViewModel: ObservableObject {
 		self.navigationManager = navigationManager
 
 		// MARK: This code makes Navigation Stack to work normally with Push/Pop but i don't want to use Combine
+		// Read more about it
+
 		// Observe navigationManager.path updates
-				self.path = navigationManager.path
-				navigationManager.$path
-					.receive(on: DispatchQueue.main)
-					.assign(to: &$path)
+		self.path = navigationManager.path
+		navigationManager.$path
+			.receive(on: DispatchQueue.main)
+			.assign(to: &$path)
 	}
 }
 
@@ -32,12 +28,18 @@ extension MenuViewModel {
 
 	func pushRoom() {
 		navigationManager.push(.room)
-//		self.path = navigationManager.path
 	}
 
 	func pushDungeon() {
 		navigationManager.push(.dungeon)
-//		self.path = navigationManager.path
+	}
+
+	func pushWorld() {
+		navigationManager.push(.world)
+	}
+
+	func pushTown() {
+		navigationManager.push(.town)
 	}
 }
 
@@ -50,6 +52,16 @@ extension MenuViewModel {
 	func buildDungeon() -> some View {
 		compositionRoot.buildDungeon()
 	}
+
+	func buildWorld() -> some View {
+		compositionRoot.buildWorld()
+	}
+
+	func buildTown() -> some View {
+		compositionRoot.buildTown()
+	}
+
+	
 }
 
 
