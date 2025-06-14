@@ -28,6 +28,7 @@
 		DDAB38202DFD5095005392F3 /* TownGameStateSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB381F2DFD5094005392F3 /* TownGameStateSnapshot.swift */; };
 		DDAB38272DFD546F005392F3 /* GlobalGameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB38262DFD546F005392F3 /* GlobalGameState.swift */; };
 		DDAB382A2DFD590C005392F3 /* TownGameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB38292DFD590C005392F3 /* TownGameManager.swift */; };
+		DDAB382C2DFD5AFD005392F3 /* GameStateManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB382B2DFD5AFD005392F3 /* GameStateManaging.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		DDAB381F2DFD5094005392F3 /* TownGameStateSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownGameStateSnapshot.swift; sourceTree = "<group>"; };
 		DDAB38262DFD546F005392F3 /* GlobalGameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalGameState.swift; sourceTree = "<group>"; };
 		DDAB38292DFD590C005392F3 /* TownGameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownGameManager.swift; sourceTree = "<group>"; };
+		DDAB382B2DFD5AFD005392F3 /* GameStateManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateManaging.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +291,7 @@
 				DDA935CE2DF7F005001AF089 /* CompositionRoot.swift */,
 				DDA935D02DF7F068001AF089 /* NavigationManager.swift */,
 				DDAB38262DFD546F005392F3 /* GlobalGameState.swift */,
+				DDAB382B2DFD5AFD005392F3 /* GameStateManaging.swift */,
 				DDA935D22DF7F15D001AF089 /* AppScreen.swift */,
 			);
 			path = AppFoundation;
@@ -369,6 +372,7 @@
 				DDAB38202DFD5095005392F3 /* TownGameStateSnapshot.swift in Sources */,
 				DDA935DB2DF7FA5D001AF089 /* RoomView.swift in Sources */,
 				DDAB38272DFD546F005392F3 /* GlobalGameState.swift in Sources */,
+				DDAB382C2DFD5AFD005392F3 /* GameStateManaging.swift in Sources */,
 				DDAB382A2DFD590C005392F3 /* TownGameManager.swift in Sources */,
 				DDAB28392DF9482D00F850BB /* DungeonView.swift in Sources */,
 				DDA935CF2DF7F005001AF089 /* CompositionRoot.swift in Sources */,

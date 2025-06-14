@@ -1,20 +1,20 @@
 import Foundation
 
-class TownGameState {
+class TownGameState: GameStateManaging {
 
-	var snapshot: TownGameStateSnapshot
+	typealias Snapshot = TownGameStateSnapshot
 
-	init(snapshot: TownGameStateSnapshot) {
+	var snapshot: Snapshot
+
+	init(snapshot: Snapshot) {
 		self.snapshot = snapshot
 	}
 
-	func extractSnapshot() -> TownGameStateSnapshot {
+	func extractSnapshot() -> Snapshot {
 		snapshot
 	}
 
-	func applySnapshot(_ snapshot: TownGameStateSnapshot) {
+	func applySnapshot(_ snapshot: Snapshot) {
 		self.snapshot = snapshot
 	}
-
-	
 }
