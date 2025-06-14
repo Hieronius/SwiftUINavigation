@@ -13,8 +13,7 @@ class MenuViewModel: ObservableObject {
 		self.compositionRoot = compositionRoot
 		self.navigationManager = navigationManager
 
-		// MARK: This code makes Navigation Stack to work normally with Push/Pop but i don't want to use Combine
-		// Read more about it
+		// MARK: This code makes Navigation Stack to work normally with Push/Pop but be cautious
 
 		// Observe navigationManager.path updates
 		self.path = navigationManager.path

@@ -24,6 +24,10 @@
 		DDA935DB2DF7FA5D001AF089 /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA935DA2DF7FA5D001AF089 /* RoomView.swift */; };
 		DDAB28372DF9482200F850BB /* DungeonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB28362DF9482200F850BB /* DungeonViewModel.swift */; };
 		DDAB28392DF9482D00F850BB /* DungeonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB28382DF9482D00F850BB /* DungeonView.swift */; };
+		DDAB381E2DFD506D005392F3 /* TownGameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB381D2DFD506D005392F3 /* TownGameState.swift */; };
+		DDAB38202DFD5095005392F3 /* TownGameStateSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB381F2DFD5094005392F3 /* TownGameStateSnapshot.swift */; };
+		DDAB38272DFD546F005392F3 /* GlobalGameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB38262DFD546F005392F3 /* GlobalGameState.swift */; };
+		DDAB382A2DFD590C005392F3 /* TownGameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB38292DFD590C005392F3 /* TownGameManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,10 @@
 		DDA935DA2DF7FA5D001AF089 /* RoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
 		DDAB28362DF9482200F850BB /* DungeonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonViewModel.swift; sourceTree = "<group>"; };
 		DDAB28382DF9482D00F850BB /* DungeonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonView.swift; sourceTree = "<group>"; };
+		DDAB381D2DFD506D005392F3 /* TownGameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownGameState.swift; sourceTree = "<group>"; };
+		DDAB381F2DFD5094005392F3 /* TownGameStateSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownGameStateSnapshot.swift; sourceTree = "<group>"; };
+		DDAB38262DFD546F005392F3 /* GlobalGameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalGameState.swift; sourceTree = "<group>"; };
+		DDAB38292DFD590C005392F3 /* TownGameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownGameManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,8 @@
 		DDA6F1D82DFAAA3B006105B7 /* Town */ = {
 			isa = PBXGroup;
 			children = (
+				DDAB381C2DFD5049005392F3 /* Managers */,
+				DDAB38212DFD51B5005392F3 /* Model */,
 				DDA6F1E02DFAB5B4006105B7 /* ViewModel */,
 				DDA6F1DF2DFAB5AD006105B7 /* View */,
 			);
@@ -128,10 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				DDA935BE2DF7EE14001AF089 /* Plan */,
-				DDA935B02DF7ED4C001AF089 /* SwiftUINavigationApp.swift */,
-				DDA935CE2DF7F005001AF089 /* CompositionRoot.swift */,
-				DDA935D02DF7F068001AF089 /* NavigationManager.swift */,
-				DDA935D22DF7F15D001AF089 /* AppScreen.swift */,
+				DDAB38282DFD54DA005392F3 /* AppFoundation */,
 				DDA6F1D82DFAAA3B006105B7 /* Town */,
 				DDA6F1D72DFAAA37006105B7 /* World */,
 				DDA935C02DF7EF07001AF089 /* Menu */,
@@ -258,6 +265,35 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		DDAB381C2DFD5049005392F3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DDAB38292DFD590C005392F3 /* TownGameManager.swift */,
+				DDAB381D2DFD506D005392F3 /* TownGameState.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		DDAB38212DFD51B5005392F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DDAB381F2DFD5094005392F3 /* TownGameStateSnapshot.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DDAB38282DFD54DA005392F3 /* AppFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				DDA935B02DF7ED4C001AF089 /* SwiftUINavigationApp.swift */,
+				DDA935CE2DF7F005001AF089 /* CompositionRoot.swift */,
+				DDA935D02DF7F068001AF089 /* NavigationManager.swift */,
+				DDAB38262DFD546F005392F3 /* GlobalGameState.swift */,
+				DDA935D22DF7F15D001AF089 /* AppScreen.swift */,
+			);
+			path = AppFoundation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -330,7 +366,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDA6F1DA2DFAAA59006105B7 /* WorldViewModel.swift in Sources */,
+				DDAB38202DFD5095005392F3 /* TownGameStateSnapshot.swift in Sources */,
 				DDA935DB2DF7FA5D001AF089 /* RoomView.swift in Sources */,
+				DDAB38272DFD546F005392F3 /* GlobalGameState.swift in Sources */,
+				DDAB382A2DFD590C005392F3 /* TownGameManager.swift in Sources */,
 				DDAB28392DF9482D00F850BB /* DungeonView.swift in Sources */,
 				DDA935CF2DF7F005001AF089 /* CompositionRoot.swift in Sources */,
 				DDA935D12DF7F068001AF089 /* NavigationManager.swift in Sources */,
@@ -340,6 +379,7 @@
 				DDA6F1E42DFAB5CB006105B7 /* TownViewModel.swift in Sources */,
 				DDA935B12DF7ED4C001AF089 /* SwiftUINavigationApp.swift in Sources */,
 				DDA6F1E22DFAB5C2006105B7 /* TownView.swift in Sources */,
+				DDAB381E2DFD506D005392F3 /* TownGameState.swift in Sources */,
 				DDAB28372DF9482200F850BB /* DungeonViewModel.swift in Sources */,
 				DDA935D32DF7F15D001AF089 /* AppScreen.swift in Sources */,
 				DDA935D92DF7F9B0001AF089 /* RoomViewModel.swift in Sources */,

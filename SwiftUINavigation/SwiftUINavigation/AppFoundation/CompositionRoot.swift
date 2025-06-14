@@ -5,9 +5,14 @@ class CompositionRoot {
 	// MARK: For each NavigationFlow create it's own NavigationManager here and inject while building a specific screen
 
 	let navigationManager = NavigationManager()
+	var globalGameState = GlobalGameState()
 
 	func getNavigationManager() -> NavigationManager {
-		return self.navigationManager
+		self.navigationManager
+	}
+
+	func getGlobalGameState() -> GlobalGameState {
+		self.globalGameState
 	}
 
 	func buildMenu() -> MenuView {
@@ -61,8 +66,14 @@ class CompositionRoot {
 
 		let navigationManager = getNavigationManager()
 
+		let globalGameState = getGlobalGameState()
+		let townGameState = TownGameState(snapshot: globalGameState.townGameStateSnapshot)
+
+		let townGameManager = TownGameManager(townGameState: townGameState)
+
 		let viewModel = TownViewModel(
-			navigationManager: navigationManager
+			navigationManager: navigationManager,
+			townGameManager: townGameManager
 		)
 
 		return TownView(viewModel: viewModel)

@@ -1,6 +1,5 @@
 
-6. Connect Menu with module 1 and 2 with navigation
-
-The way i did connect two screens with each other by pop() -> push() is working. Try to expand it
-
-if i do transition from Room to Dungeon it mean we should save current room state before transition. So i will create two methods like "save state" and "transition to dungeon". Should i combine one in another and call it "saveAndTransition" or just "goToDungeon" will be enough?
+1. Create global state and set in composition root
+2. Create dedicated module game manager
+3. Inject directly to the game manager
+4. Only reflect on game manager changes via view model @Published

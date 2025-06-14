@@ -3,9 +3,13 @@ import SwiftUI
 class TownViewModel: ObservableObject {
 
 	private let navigationManager: NavigationManager
+	private let townGameManager: TownGameManager
 
-	init(navigationManager: NavigationManager) {
+	init(navigationManager: NavigationManager,
+		 townGameManager: TownGameManager) {
+
 		self.navigationManager = navigationManager
+		self.townGameManager = townGameManager
 	}
 }
 
