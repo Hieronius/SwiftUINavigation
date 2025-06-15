@@ -23,8 +23,3 @@ struct DungeonGameStateSnapshot {
 
 	var rooms = 10
 }
-
-struct WorldGameStateSnapshot {
-
-	var locations = 3
-}

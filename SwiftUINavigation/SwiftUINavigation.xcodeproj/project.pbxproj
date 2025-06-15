@@ -29,6 +29,9 @@
 		DDAB38272DFD546F005392F3 /* GlobalGameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB38262DFD546F005392F3 /* GlobalGameState.swift */; };
 		DDAB382A2DFD590C005392F3 /* TownGameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB38292DFD590C005392F3 /* TownGameManager.swift */; };
 		DDAB382C2DFD5AFD005392F3 /* GameStateManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB382B2DFD5AFD005392F3 /* GameStateManaging.swift */; };
+		DDAB580C2DFEA2C300AC45D1 /* WorldGameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB580B2DFEA2C300AC45D1 /* WorldGameManager.swift */; };
+		DDAB580F2DFEA2F700AC45D1 /* WorldGameStateSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB580E2DFEA2F700AC45D1 /* WorldGameStateSnapshot.swift */; };
+		DDAB58122DFEA31D00AC45D1 /* WorldGameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB58112DFEA31D00AC45D1 /* WorldGameState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,9 @@
 		DDAB38262DFD546F005392F3 /* GlobalGameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalGameState.swift; sourceTree = "<group>"; };
 		DDAB38292DFD590C005392F3 /* TownGameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownGameManager.swift; sourceTree = "<group>"; };
 		DDAB382B2DFD5AFD005392F3 /* GameStateManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateManaging.swift; sourceTree = "<group>"; };
+		DDAB580B2DFEA2C300AC45D1 /* WorldGameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldGameManager.swift; sourceTree = "<group>"; };
+		DDAB580E2DFEA2F700AC45D1 /* WorldGameStateSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldGameStateSnapshot.swift; sourceTree = "<group>"; };
+		DDAB58112DFEA31D00AC45D1 /* WorldGameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldGameState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,8 @@
 		DDA6F1D72DFAAA37006105B7 /* World */ = {
 			isa = PBXGroup;
 			children = (
+				DDAB580D2DFEA2EE00AC45D1 /* Model */,
+				DDAB580A2DFEA2B900AC45D1 /* Managers */,
 				DDA6F1DB2DFAACA2006105B7 /* ViewModel */,
 				DDA6F1DC2DFAACAA006105B7 /* View */,
 			);
@@ -297,6 +305,23 @@
 			path = AppFoundation;
 			sourceTree = "<group>";
 		};
+		DDAB580A2DFEA2B900AC45D1 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DDAB580B2DFEA2C300AC45D1 /* WorldGameManager.swift */,
+				DDAB58112DFEA31D00AC45D1 /* WorldGameState.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		DDAB580D2DFEA2EE00AC45D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DDAB580E2DFEA2F700AC45D1 /* WorldGameStateSnapshot.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -374,7 +399,9 @@
 				DDAB38272DFD546F005392F3 /* GlobalGameState.swift in Sources */,
 				DDAB382C2DFD5AFD005392F3 /* GameStateManaging.swift in Sources */,
 				DDAB382A2DFD590C005392F3 /* TownGameManager.swift in Sources */,
+				DDAB580F2DFEA2F700AC45D1 /* WorldGameStateSnapshot.swift in Sources */,
 				DDAB28392DF9482D00F850BB /* DungeonView.swift in Sources */,
+				DDAB58122DFEA31D00AC45D1 /* WorldGameState.swift in Sources */,
 				DDA935CF2DF7F005001AF089 /* CompositionRoot.swift in Sources */,
 				DDA935D12DF7F068001AF089 /* NavigationManager.swift in Sources */,
 				DDA6F1DE2DFAACB2006105B7 /* WorldView.swift in Sources */,
@@ -382,6 +409,7 @@
 				DDA935D52DF7F289001AF089 /* MenuViewModel.swift in Sources */,
 				DDA6F1E42DFAB5CB006105B7 /* TownViewModel.swift in Sources */,
 				DDA935B12DF7ED4C001AF089 /* SwiftUINavigationApp.swift in Sources */,
+				DDAB580C2DFEA2C300AC45D1 /* WorldGameManager.swift in Sources */,
 				DDA6F1E22DFAB5C2006105B7 /* TownView.swift in Sources */,
 				DDAB381E2DFD506D005392F3 /* TownGameState.swift in Sources */,
 				DDAB28372DF9482200F850BB /* DungeonViewModel.swift in Sources */,

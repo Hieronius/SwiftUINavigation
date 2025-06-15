@@ -3,9 +3,13 @@ import SwiftUI
 class WorldViewModel: ObservableObject {
 
 	let navigationManager: NavigationManager
+	let worldGameManager: WorldGameManager
 
-	init(navigationManager: NavigationManager) {
+	init(navigationManager: NavigationManager,
+		 worldGameManager: WorldGameManager) {
+		
 		self.navigationManager = navigationManager
+		self.worldGameManager = worldGameManager
 	}
 }
 

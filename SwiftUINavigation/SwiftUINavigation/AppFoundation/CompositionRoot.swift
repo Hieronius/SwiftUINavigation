@@ -6,20 +6,13 @@ class CompositionRoot {
 
 	let navigationManager = NavigationManager()
 	var globalGameState = GlobalGameState()
-
-	func getNavigationManager() -> NavigationManager {
-		self.navigationManager
-	}
-
-	func getGlobalGameState() -> GlobalGameState {
-		self.globalGameState
-	}
+	// let swiftDataManager = SwiftDataManager()
 
 	func buildMenu() -> MenuView {
 
 		let compositionRoot = self
 
-		let navigationManager = getNavigationManager()
+		let navigationManager = self.navigationManager
 
 		let viewModel = MenuViewModel(
 			compositionRoot: compositionRoot,
@@ -31,7 +24,7 @@ class CompositionRoot {
 
 	func buildRoom() -> RoomView {
 
-		let navigationManager = getNavigationManager()
+		let navigationManager = self.navigationManager
 
 		let viewModel = RoomViewModel(
 			navigationManager: navigationManager
@@ -42,7 +35,7 @@ class CompositionRoot {
 
 	func buildDungeon() -> DungeonView {
 
-		let navigationManager = getNavigationManager()
+		let navigationManager = self.navigationManager
 
 		let viewModel = DungeonViewModel(
 			navigationManager: navigationManager
@@ -53,10 +46,19 @@ class CompositionRoot {
 
 	func buildWorld() -> WorldView {
 
-		let navigationManager = getNavigationManager()
+		let navigationManager = self.navigationManager
+
+		let worldGameState = WorldGameState(
+			snapshot: self.globalGameState.worldGameStateSnapshot
+		)
+
+		let worldGameManager = WorldGameManager(
+			worldGameState: worldGameState
+		)
 
 		let viewModel = WorldViewModel(
-			navigationManager: navigationManager
+			navigationManager: navigationManager,
+			worldGameManager: worldGameManager
 		)
 
 		return WorldView(viewModel: viewModel)
@@ -64,12 +66,15 @@ class CompositionRoot {
 
 	func buildTown() -> TownView {
 
-		let navigationManager = getNavigationManager()
+		let navigationManager = self.navigationManager
 
-		let globalGameState = getGlobalGameState()
-		let townGameState = TownGameState(snapshot: globalGameState.townGameStateSnapshot)
+		let townGameState = TownGameState(
+			snapshot: self.globalGameState.townGameStateSnapshot
+		)
 
-		let townGameManager = TownGameManager(townGameState: townGameState)
+		let townGameManager = TownGameManager(
+			townGameState: townGameState
+		)
 
 		let viewModel = TownViewModel(
 			navigationManager: navigationManager,

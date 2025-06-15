@@ -3,3 +3,5 @@
 2. Create dedicated module game manager
 3. Inject directly to the game manager
 4. Only reflect on game manager changes via view model @Published
+
+Put SwiftDataManager as class to CompositionRoot and inject directly to ModuleGameManager as dependency
