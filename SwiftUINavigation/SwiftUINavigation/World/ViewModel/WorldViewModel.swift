@@ -5,11 +5,33 @@ class WorldViewModel: ObservableObject {
 	let navigationManager: NavigationManager
 	let worldGameManager: WorldGameManager
 
+	@Published var locationsNumber = 1
+
 	init(navigationManager: NavigationManager,
 		 worldGameManager: WorldGameManager) {
 		
 		self.navigationManager = navigationManager
 		self.worldGameManager = worldGameManager
+
+		syncStateWithUI()
+	}
+}
+
+extension WorldViewModel {
+
+	func syncStateWithUI() {
+		let snapshot = worldGameManager.getStateSnapshot()
+		locationsNumber = snapshot.locations
+	}
+
+	func addLocation() {
+		worldGameManager.addLocations()
+		syncStateWithUI()
+	}
+
+	func removeLocation() {
+		worldGameManager.removeLocations()
+		syncStateWithUI()
 	}
 }
 

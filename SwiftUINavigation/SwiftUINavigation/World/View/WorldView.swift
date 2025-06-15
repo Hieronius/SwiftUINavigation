@@ -11,6 +11,26 @@ struct WorldView: View {
 
 	var body: some View {
 
+		Spacer()
+
+		Text("\(viewModel.locationsNumber)")
+
+		Spacer()
+
+		HStack {
+
+			Button("Add Location") {
+				viewModel.addLocation()
+			}
+
+			Spacer()
+
+			Button("Remove Location") {
+
+				viewModel.removeLocation()
+			}
+		}
+
 		VStack {
 
 			Spacer()
