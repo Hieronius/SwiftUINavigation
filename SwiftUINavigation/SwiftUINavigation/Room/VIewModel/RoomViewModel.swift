@@ -3,9 +3,14 @@ import SwiftUI
 class RoomViewModel: ObservableObject {
 
 	private let navigationManager: NavigationManager
+	private let roomGameManager: RoomGameManager
 
-	init(navigationManager: NavigationManager) {
+	init(navigationManager: NavigationManager,
+		 roomGameManager: RoomGameManager) {
+
 		self.navigationManager = navigationManager
+		self.roomGameManager = roomGameManager
+		
 		print("🔍 Path now has \(navigationManager.path.count) entries: \(navigationManager.path)")
 	}
 

@@ -9,17 +9,7 @@ struct GlobalGameState {
 	var worldGameStateSnapshot = WorldGameStateSnapshot()
 }
 
-struct RoomGameStateSnapshot {
-
-	var roomNumber = 1
-}
-
 struct CorridorGameStateSnapshot {
 
 	var gold = 100
-}
-
-struct DungeonGameStateSnapshot {
-
-	var rooms = 10
 }

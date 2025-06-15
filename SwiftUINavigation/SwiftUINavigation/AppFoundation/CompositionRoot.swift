@@ -26,8 +26,16 @@ class CompositionRoot {
 
 		let navigationManager = self.navigationManager
 
+		let roomGameState = RoomGameState(
+			snapshot: self.globalGameState.roomGameStateSnapshot
+		)
+
+		let roomGameManager = RoomGameManager(
+			roomGameState: roomGameState)
+
 		let viewModel = RoomViewModel(
-			navigationManager: navigationManager
+			navigationManager: navigationManager,
+			roomGameManager: roomGameManager
 		)
 
 		return RoomView(viewModel: viewModel)
@@ -37,8 +45,16 @@ class CompositionRoot {
 
 		let navigationManager = self.navigationManager
 
+		let dungeonGameState = DungeonGameState(
+			snapshot: self.globalGameState.dungeonGameStateSnapshot
+		)
+
+		let dungeonGameManager = DungeonGameManager(
+			dungeonGameState: dungeonGameState)
+
 		let viewModel = DungeonViewModel(
-			navigationManager: navigationManager
+			navigationManager: navigationManager,
+			dungeonGameManager: dungeonGameManager
 		)
 
 		return DungeonView(viewModel: viewModel)

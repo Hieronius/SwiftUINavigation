@@ -32,6 +32,12 @@
 		DDAB580C2DFEA2C300AC45D1 /* WorldGameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB580B2DFEA2C300AC45D1 /* WorldGameManager.swift */; };
 		DDAB580F2DFEA2F700AC45D1 /* WorldGameStateSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB580E2DFEA2F700AC45D1 /* WorldGameStateSnapshot.swift */; };
 		DDAB58122DFEA31D00AC45D1 /* WorldGameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB58112DFEA31D00AC45D1 /* WorldGameState.swift */; };
+		DDAB58152DFEA56900AC45D1 /* RoomGameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB58142DFEA56900AC45D1 /* RoomGameManager.swift */; };
+		DDAB58172DFEA57300AC45D1 /* RoomGameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB58162DFEA57200AC45D1 /* RoomGameState.swift */; };
+		DDAB58192DFEA57D00AC45D1 /* RoomGameStateSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB58182DFEA57D00AC45D1 /* RoomGameStateSnapshot.swift */; };
+		DDAB581B2DFEA74D00AC45D1 /* DungeonGameStateSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB581A2DFEA74D00AC45D1 /* DungeonGameStateSnapshot.swift */; };
+		DDAB581E2DFEA76300AC45D1 /* DungeonGameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB581D2DFEA76300AC45D1 /* DungeonGameState.swift */; };
+		DDAB58202DFEA76B00AC45D1 /* DungeonGameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAB581F2DFEA76B00AC45D1 /* DungeonGameManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +67,12 @@
 		DDAB580B2DFEA2C300AC45D1 /* WorldGameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldGameManager.swift; sourceTree = "<group>"; };
 		DDAB580E2DFEA2F700AC45D1 /* WorldGameStateSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldGameStateSnapshot.swift; sourceTree = "<group>"; };
 		DDAB58112DFEA31D00AC45D1 /* WorldGameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldGameState.swift; sourceTree = "<group>"; };
+		DDAB58142DFEA56900AC45D1 /* RoomGameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGameManager.swift; sourceTree = "<group>"; };
+		DDAB58162DFEA57200AC45D1 /* RoomGameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGameState.swift; sourceTree = "<group>"; };
+		DDAB58182DFEA57D00AC45D1 /* RoomGameStateSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGameStateSnapshot.swift; sourceTree = "<group>"; };
+		DDAB581A2DFEA74D00AC45D1 /* DungeonGameStateSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonGameStateSnapshot.swift; sourceTree = "<group>"; };
+		DDAB581D2DFEA76300AC45D1 /* DungeonGameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonGameState.swift; sourceTree = "<group>"; };
+		DDAB581F2DFEA76B00AC45D1 /* DungeonGameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonGameManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +193,7 @@
 		DDA935C12DF7EF10001AF089 /* Dungeon */ = {
 			isa = PBXGroup;
 			children = (
+				DDAB581C2DFEA75A00AC45D1 /* Managers */,
 				DDA935C82DF7EF4E001AF089 /* Model */,
 				DDA935C72DF7EF4A001AF089 /* ViewModel */,
 				DDA935C62DF7EF46001AF089 /* View */,
@@ -191,6 +204,7 @@
 		DDA935C22DF7EF16001AF089 /* Room */ = {
 			isa = PBXGroup;
 			children = (
+				DDAB58132DFEA55E00AC45D1 /* Managers */,
 				DDA935C52DF7EF2F001AF089 /* Model */,
 				DDA935C42DF7EF28001AF089 /* VIewModel */,
 				DDA935C32DF7EF1F001AF089 /* View */,
@@ -217,6 +231,7 @@
 		DDA935C52DF7EF2F001AF089 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DDAB58182DFEA57D00AC45D1 /* RoomGameStateSnapshot.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -240,6 +255,7 @@
 		DDA935C82DF7EF4E001AF089 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DDAB581A2DFEA74D00AC45D1 /* DungeonGameStateSnapshot.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -322,6 +338,24 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DDAB58132DFEA55E00AC45D1 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DDAB58142DFEA56900AC45D1 /* RoomGameManager.swift */,
+				DDAB58162DFEA57200AC45D1 /* RoomGameState.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		DDAB581C2DFEA75A00AC45D1 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DDAB581D2DFEA76300AC45D1 /* DungeonGameState.swift */,
+				DDAB581F2DFEA76B00AC45D1 /* DungeonGameManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -399,15 +433,21 @@
 				DDAB38272DFD546F005392F3 /* GlobalGameState.swift in Sources */,
 				DDAB382C2DFD5AFD005392F3 /* GameStateManaging.swift in Sources */,
 				DDAB382A2DFD590C005392F3 /* TownGameManager.swift in Sources */,
+				DDAB581B2DFEA74D00AC45D1 /* DungeonGameStateSnapshot.swift in Sources */,
 				DDAB580F2DFEA2F700AC45D1 /* WorldGameStateSnapshot.swift in Sources */,
 				DDAB28392DF9482D00F850BB /* DungeonView.swift in Sources */,
+				DDAB581E2DFEA76300AC45D1 /* DungeonGameState.swift in Sources */,
 				DDAB58122DFEA31D00AC45D1 /* WorldGameState.swift in Sources */,
 				DDA935CF2DF7F005001AF089 /* CompositionRoot.swift in Sources */,
 				DDA935D12DF7F068001AF089 /* NavigationManager.swift in Sources */,
 				DDA6F1DE2DFAACB2006105B7 /* WorldView.swift in Sources */,
 				DDA935B32DF7ED4C001AF089 /* MenuView.swift in Sources */,
+				DDAB58152DFEA56900AC45D1 /* RoomGameManager.swift in Sources */,
+				DDAB58172DFEA57300AC45D1 /* RoomGameState.swift in Sources */,
+				DDAB58192DFEA57D00AC45D1 /* RoomGameStateSnapshot.swift in Sources */,
 				DDA935D52DF7F289001AF089 /* MenuViewModel.swift in Sources */,
 				DDA6F1E42DFAB5CB006105B7 /* TownViewModel.swift in Sources */,
+				DDAB58202DFEA76B00AC45D1 /* DungeonGameManager.swift in Sources */,
 				DDA935B12DF7ED4C001AF089 /* SwiftUINavigationApp.swift in Sources */,
 				DDAB580C2DFEA2C300AC45D1 /* WorldGameManager.swift in Sources */,
 				DDA6F1E22DFAB5C2006105B7 /* TownView.swift in Sources */,
