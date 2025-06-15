@@ -10,6 +10,24 @@ struct DungeonView: View {
 
 	var body: some View {
 
+		Spacer()
+
+		Text("\(viewModel.roomsNumber)")
+
+		Spacer()
+
+
+		HStack {
+			Button("Add Rooms") {
+				viewModel.addRooms()
+			}
+			Button("Remove Rooms") {
+				viewModel.removeRooms()
+			}
+		}
+
+		Spacer()
+
 		VStack {
 
 			Spacer()
