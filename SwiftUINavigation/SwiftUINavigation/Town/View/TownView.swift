@@ -10,6 +10,22 @@ struct TownView: View {
 
 	var body: some View {
 
+		Spacer()
+		Text("\(viewModel.potionsNumber)")
+		Spacer()
+
+		HStack {
+			Spacer()
+			Button("buy potion") {
+				viewModel.addPotion()
+			}
+			Spacer()
+			Button("sell potion") {
+				viewModel.removePotion()
+			}
+			Spacer()
+		}
+
 		VStack {
 
 			Spacer()
