@@ -11,9 +11,20 @@ struct RoomView: View {
 	var body: some View {
 
 		VStack {
-			Spacer()
 			Text("Room")
-			Spacer()
+			Text("\(viewModel.roomNumber)")
+
+
+			HStack {
+				Button("+") {
+					viewModel.addRoom()
+				}
+				Button("-") {
+					viewModel.removeRoom()
+				}
+
+			}
+
 
 			Button("Go back to Menu") {
 				viewModel.backToMenu()
